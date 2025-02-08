@@ -1,6 +1,6 @@
 # BaseTestFramework
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)]([BaseTestFramework/LICENSE at main · programmerChenYu/BaseTestFramework](https://github.com/programmerChenYu/BaseTestFramework/blob/main/LICENSE))
+![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)
 
 BaseTestFrameWork 是一个基于 **Selenium** 和 **TestNG** 构建的自动化测试框架，采用 **POM（Page Object Model）** 设计模式，集成 **Allure** 测试报告和 **Maven** 依赖管理，旨在提供高可维护性、可扩展性的自动化测试基础框架。
 
