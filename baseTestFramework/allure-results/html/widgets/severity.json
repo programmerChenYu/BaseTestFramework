@@ -1,0 +1,1 @@
+[{"uid":"faa04d2c4a1560d3","name":"testBaiduSearchCase","time":{"start":1739006564590,"stop":1739006567997,"duration":3407},"status":"failed","severity":"normal"},{"uid":"3006be955920468a","name":"loginCase","time":{"start":1739018030529,"stop":1739018036067,"duration":5538},"status":"passed","severity":"normal"}]
