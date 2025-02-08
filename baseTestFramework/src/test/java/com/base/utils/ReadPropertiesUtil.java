@@ -3,6 +3,7 @@ package com.base.utils;
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 import java.util.logging.Logger;
 
@@ -23,7 +24,8 @@ public class ReadPropertiesUtil {
     private Properties initProperties(String filePath) {
         properties = new Properties();
         try {
-            FileInputStream fileInputStream = new FileInputStream(filePath);
+            InputStream fileInputStream = this.getClass().getClassLoader().getResourceAsStream(filePath);
+//            FileInputStream fileInputStream = new FileInputStream(filePath);
             BufferedInputStream inputStream = new BufferedInputStream(fileInputStream);
             properties.load(inputStream);
         } catch (IOException e) {

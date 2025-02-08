@@ -1,3 +1,0 @@
-"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
-"failed","Sat Feb 08 17:22:44 CST 2025","Sat Feb 08 17:22:47 CST 2025","3407","All Test Suite","测试百度搜索","com.base.cases.BaiduSearchCase","com.base.cases.BaiduSearchCase","testBaiduSearchCase","testBaiduSearchCase",""
-"passed","Sat Feb 08 20:33:50 CST 2025","Sat Feb 08 20:33:56 CST 2025","5538","All Test Suite","测试百度搜索","com.base.cases.DeepSeekLoginCase","com.base.cases.DeepSeekLoginCase","loginCase","loginCase",""

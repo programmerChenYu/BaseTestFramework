@@ -7,5 +7,5 @@ package com.base.constant;
  */
 public class FilePathConstant {
 
-    public static final String ELEMENT_PROPERTIES = "D:\\code\\BaseTestFramework\\baseTestFramework\\src\\test\\resources\\element.properties";
+    public static final String ELEMENT_PROPERTIES = "element.properties";
 }

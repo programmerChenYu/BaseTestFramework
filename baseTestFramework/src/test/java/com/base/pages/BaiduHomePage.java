@@ -11,6 +11,10 @@ import org.openqa.selenium.WebElement;
  */
 public class BaiduHomePage extends BasePage {
 
+    public BaiduHomePage(String browser) {
+        super(browser);
+    }
+
     /**
      * 返回输入框元素
      * @return

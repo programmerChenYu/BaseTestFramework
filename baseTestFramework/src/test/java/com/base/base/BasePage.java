@@ -27,8 +27,17 @@ public class BasePage {
     /**
      * 构造函数，初始化 WebDriver 使用同一个浏览器驱动对象，防止多次创建对象
      */
-    public BasePage() {
-        this.driver = WebDriverUtil.getDriver(BrowserTypeEnum.CHROME);
+    public BasePage(String browser) {
+        switch (browser) {
+            case "firefox":
+                this.driver = WebDriverUtil.getDriver(BrowserTypeEnum.FIREFOX);
+                break;
+            case "edge":
+                this.driver = WebDriverUtil.getDriver(BrowserTypeEnum.EDGE);
+                break;
+            default:
+                this.driver = WebDriverUtil.getDriver(BrowserTypeEnum.CHROME);
+        }
     }
 
     /**

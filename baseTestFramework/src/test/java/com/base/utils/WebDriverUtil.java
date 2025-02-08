@@ -1,7 +1,6 @@
 package com.base.utils;
 
 import com.base.enums.BrowserTypeEnum;
-import com.base.enums.EnvironmentTypeEnum;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -47,7 +46,10 @@ public class WebDriverUtil {
                         default:
                             throw new IllegalArgumentException("不支持的浏览器类型：" + browserType);
                     }
-                    driver.get(EnvironmentTypeEnum.TEST.getUrl());
+                    ReadPropertiesUtil propertiesUtil = new ReadPropertiesUtil("config.properties");
+                    String env = propertiesUtil.getProperty("curEnvironment");
+                    String url = propertiesUtil.getProperty(env + "Url");
+                    driver.get(url);
                     driver.manage().window().maximize();
                 }
             }

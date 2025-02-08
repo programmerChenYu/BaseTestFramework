@@ -4,11 +4,15 @@ import com.base.base.BasePage;
 import org.openqa.selenium.WebElement;
 
 /**
- * Description: 文件头
- * Created by 爱吃小鱼的橙子 on 2025-02-08 19:31
+ * Description: deepSeek 登陆页面
+ * Created by cy on 2025-02-08 19:31
  * Created with IntelliJ IDEA.
  */
 public class DeepSeekLoginPage extends BasePage {
+
+    public DeepSeekLoginPage(String browser) {
+        super(browser);
+    }
 
     /**
      * 登录页面密码登录按钮

@@ -19,8 +19,9 @@ public class BaiduSearchCase {
     private BaiduHomeHandler baiduHomeHandler;
 
     @BeforeClass
-    public void init() {
-        baiduHomeHandler = new BaiduHomeHandler();
+    @Parameters({"browser"})
+    public void init(String browser) {
+        baiduHomeHandler = new BaiduHomeHandler(browser);
     }
 
     @Test

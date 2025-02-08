@@ -11,8 +11,8 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 /**
- * Description: 文件头
- * Created by 爱吃小鱼的橙子 on 2025-02-08 20:00
+ * Description: deepSeek 登录测试
+ * Created by cy on 2025-02-08 20:00
  * Created with IntelliJ IDEA.
  */
 public class DeepSeekLoginCase {
@@ -20,8 +20,9 @@ public class DeepSeekLoginCase {
     private DeepSeekLoginHandler deepSeekLoginHandler;
 
     @BeforeClass
-    public void init() {
-        deepSeekLoginHandler = new DeepSeekLoginHandler();
+    @Parameters({"browser"})
+    public void init(String browser) {
+        deepSeekLoginHandler = new DeepSeekLoginHandler(browser);
     }
 
     @Test

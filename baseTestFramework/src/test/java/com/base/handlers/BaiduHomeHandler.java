@@ -10,10 +10,10 @@ import com.base.pages.BaiduHomePage;
  */
 public class BaiduHomeHandler extends BaseHandler {
 
-    private static final BaiduHomePage baiduHomePage;
+    private final BaiduHomePage baiduHomePage;
 
-    static {
-        baiduHomePage = new BaiduHomePage();
+    public BaiduHomeHandler(String browser) {
+        this.baiduHomePage = new BaiduHomePage(browser);
     }
 
     /**

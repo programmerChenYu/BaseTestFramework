@@ -4,16 +4,16 @@ import com.base.base.BaseHandler;
 import com.base.pages.DeepSeekLoginPage;
 
 /**
- * Description: 文件头
- * Created by 爱吃小鱼的橙子 on 2025-02-08 19:50
+ * Description: deepSeek 登陆页面操作
+ * Created by cy on 2025-02-08 19:50
  * Created with IntelliJ IDEA.
  */
 public class DeepSeekLoginHandler extends BaseHandler {
 
     private DeepSeekLoginPage deepSeekLoginPage;
 
-    public DeepSeekLoginHandler() {
-        deepSeekLoginPage = new DeepSeekLoginPage();
+    public DeepSeekLoginHandler(String browser) {
+        deepSeekLoginPage = new DeepSeekLoginPage(browser);
     }
 
     /**
