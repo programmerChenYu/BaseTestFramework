@@ -6,7 +6,7 @@
 
 > **让测试代码比春天的新芽更优雅！**
 
-BaseTestFrameWork 是一个基于 **Selenium** 和 **TestNG** 构建的自动化测试框架，采用 **POM（Page Object Model）** 设计模式，集成 **Allure** 测试报告和 **Maven** 依赖管理，旨在提供高可维护性、可扩展性的自动化测试基础框架。
+BaseTestFramework 是一个基于 **Selenium** 和 **TestNG** 构建的自动化测试框架，采用 **POM（Page Object Model）** 设计模式，集成 **Allure** 测试报告和 **Maven** 依赖管理，旨在提供高可维护性、可扩展性的自动化测试基础框架。
 
 
 ## 🌟 项目亮点
@@ -49,7 +49,7 @@ BaseTestFrameWork 是一个基于 **Selenium** 和 **TestNG** 构建的自动化
 | Maven          | 3.9.6+        | `mvn -v`          |
 | Allure         | 2.20+         | `allure --version`|
 
-> **🚨 注意：本框架要求开发环境严格匹配JDK 17与Maven 3.9.6，使用旧版本可能导致不可预知的行为！**
+> **🚨 注意：若使用旧版本可能导致不可预知的行为！**
 
 
 ## 🚀 快速上手指南
