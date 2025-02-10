@@ -1,3 +1,6 @@
+.idea/
+allure-results/
+screenshot/
 target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/

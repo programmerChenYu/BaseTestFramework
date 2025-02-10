@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="测试" skipfailedinvocationcounts="true">
+        <classes>
+            <class name="com.github.programmerChenYu.cases.DeepSeekLoginCase">
+                <parameter name="browser" value="chrome"></parameter>
+                <parameter name="accountNumber" value="17771787353"></parameter>
+                <parameter name="password" value="ds123456"></parameter>
+                <methods>
+                    <include name="loginCase" />
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
