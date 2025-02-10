@@ -58,6 +58,37 @@ public class WebDriverUtil {
         return driver;
     }
 
+    public static WebDriver getDriver(String browser) {
+        if (driver == null) {
+            synchronized (WebDriverUtil.class) {
+                if (driver == null) {
+                    switch (browser) {
+                        case "chrome":
+                            WebDriverManager.chromedriver().setup();
+                            driver = new ChromeDriver();
+                            break;
+                        case "firefox":
+                            WebDriverManager.firefoxdriver().setup();
+                            driver = new FirefoxDriver();
+                            break;
+                        case "edge":
+                            WebDriverManager.edgedriver().setup();
+                            driver = new EdgeDriver();
+                            break;
+                        default:
+                            throw new IllegalArgumentException("不支持的浏览器类型：" + browser);
+                    }
+                    ReadPropertiesUtil propertiesUtil = new ReadPropertiesUtil(FilePathConstant.CONFIG_PROPERTIES);
+                    String env = propertiesUtil.getProperty("curEnvironment");
+                    String url = propertiesUtil.getProperty(env + "Url");
+                    driver.get(url);
+                    driver.manage().window().maximize();
+                }
+            }
+        }
+        return driver;
+    }
+
     /**
      * 关闭并释放资源
      */

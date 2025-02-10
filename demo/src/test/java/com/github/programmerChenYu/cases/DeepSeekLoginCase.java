@@ -1,6 +1,7 @@
 package com.github.programmerChenYu.cases;
 
 import com.github.programmerChenYu.annotation.CaptureScreenshotOnFailure;
+import com.github.programmerChenYu.base.BaseCase;
 import com.github.programmerChenYu.handlers.DeepSeekLoginHandler;
 import com.github.programmerChenYu.listener.ScreenshotListener;
 import com.github.programmerChenYu.utils.WebDriverUtil;
@@ -15,14 +16,14 @@ import org.testng.annotations.*;
  * Created with IntelliJ IDEA.
  */
 @Listeners({ScreenshotListener.class})
-public class DeepSeekLoginCase {
+public class DeepSeekLoginCase extends BaseCase {
 
-    private DeepSeekLoginHandler handler;
+    private DeepSeekLoginHandler deepSeekLoginHandler;
 
     @BeforeClass
     @Parameters({"browser"})
     public void init(String browser) {
-        handler = new DeepSeekLoginHandler(browser);
+        deepSeekLoginHandler = new DeepSeekLoginHandler(browser);
     }
 
     @Test
@@ -30,20 +31,20 @@ public class DeepSeekLoginCase {
     @CaptureScreenshotOnFailure(caseName = "deepSeek 登录测试用例")
     public void loginCase(String accountNumber, String password) {
         Allure.step("step1: 点击密码登录按钮");
-        handler.clickPasswordLoginButton();
+        deepSeekLoginHandler.clickPasswordLoginButton();
         Allure.step("step2: 点击账号输入框");
-        handler.clickAccountNumberInput();
+        deepSeekLoginHandler.clickAccountNumberInput();
         Allure.step("step3: 输入账号【" + accountNumber + "】");
-        handler.inputAccountNumberInput(accountNumber);
+        deepSeekLoginHandler.inputAccountNumberInput(accountNumber);
         Allure.step("step4: 点击密码输入框");
-        handler.clickPasswordInput();
+        deepSeekLoginHandler.clickPasswordInput();
         Allure.step("step5: 输入密码【" + password + "】");
-        handler.inputPasswordInput(password);
+        deepSeekLoginHandler.inputPasswordInput(password);
         Allure.step("step6: 点击同意用户协议");
-        handler.clickAgreeButton();
+        deepSeekLoginHandler.clickAgreeButton();
         Allure.step("step7: 点击登录");
-        handler.clickLonginButton();
-        WebDriver driver = handler.getDriver();
+        deepSeekLoginHandler.clickLonginButton();
+        WebDriver driver = deepSeekLoginHandler.getDriver();
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {

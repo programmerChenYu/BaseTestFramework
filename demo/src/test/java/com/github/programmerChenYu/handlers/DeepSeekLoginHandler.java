@@ -13,6 +13,7 @@ public class DeepSeekLoginHandler extends BaseHandler {
     private DeepSeekLoginPage deepSeekLoginPage;
 
     public DeepSeekLoginHandler(String browser) {
+        super(browser);
         deepSeekLoginPage = new DeepSeekLoginPage(browser);
     }
 

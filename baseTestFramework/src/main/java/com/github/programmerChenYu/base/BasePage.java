@@ -22,7 +22,7 @@ import java.util.List;
 @Slf4j
 public class BasePage {
 
-    private final WebDriver driver;
+    private WebDriver driver;
 
     /**
      * 构造函数，初始化 WebDriver 使用同一个浏览器驱动对象，防止多次创建对象

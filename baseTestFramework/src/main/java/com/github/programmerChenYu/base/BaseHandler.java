@@ -1,7 +1,5 @@
 package com.github.programmerChenYu.base;
 
-import com.github.programmerChenYu.enums.BrowserTypeEnum;
-import com.github.programmerChenYu.utils.WebDriverUtil;
 import io.qameta.allure.Allure;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
@@ -25,10 +23,12 @@ import java.util.Set;
 @Slf4j
 public class BaseHandler {
 
-    private final WebDriver driver;
+    private WebDriver driver;
+    private BasePage basePage;
 
-    public BaseHandler() {
-        this.driver = WebDriverUtil.getDriver(BrowserTypeEnum.CHROME);
+    public BaseHandler(String browser) {
+        basePage = new BasePage(browser);
+        this.driver = basePage.getDriver();
     }
 
     /**
