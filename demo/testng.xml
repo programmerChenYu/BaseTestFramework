@@ -6,7 +6,7 @@
         <classes>
             <class name="com.github.programmerChenYu.cases.DeepSeekLoginCase">
                 <parameter name="browser" value="chrome"></parameter>
-                <parameter name="accountNumber" value="17771787353"></parameter>
+                <parameter name="accountNumber" value="12345678901"></parameter>
                 <parameter name="password" value="ds123456"></parameter>
                 <methods>
                     <include name="loginCase" />
