@@ -56,15 +56,53 @@ BaseTestFrameWork 是一个基于 **Selenium** 和 **TestNG** 构建的自动化
 
 ### 1. 环境准备
 ```bash
+# 打开 BaseTestFramework 项目，执行如下命令
 mvn install -DskipTests
+
+# 打开自己的项目，在pom.xml中添加如下依赖
+<dependency>
+  <groupId>com.github.programmerChenYu</groupId>
+  <artifactId>baseTestFramework</artifactId>
+  <version>1.0.0</version>
+  <scope>test</scope>
+</dependency>
+
+# 在pom.xml中添加如下插件
+<build>
+  <defaultGoal>compile</defaultGoal>
+  <plugins>
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-compiler-plugin</artifactId>
+      <version>3.11.0</version>
+      <configuration>
+        <encoding>UTF-8</encoding>
+        <source>17</source>
+        <target>17</target>
+      </configuration>
+    </plugin>
+
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-surefire-plugin</artifactId>
+      <version>3.0.0-M5</version>
+      <configuration>
+        <testFailureIgnore>true</testFailureIgnore>
+        <suiteXmlFiles>
+          <suiteXmlFile>testng.xml</suiteXmlFile>
+        </suiteXmlFiles>
+      </configuration>
+    </plugin>
+  </plugins>
+</build>
 ```
 
 ### 2. 创建配置文件
 ```properties
-# 在test/resource目录下创建element.properties文件，内容格式如下（定位方式和定位用 > 分隔）
+# 在src/test/resource目录下创建element.properties文件，内容格式如下（定位方式和定位用 > 分隔）
 loginButton=xpath>//*[@id="root"]/div/div[2]/div/div/div[7]
 
-# 在test/resource目录下创建config.properties文件，基本内容如下
+# 在src/test/resource目录下创建config.properties文件，基本内容如下
 curEnvironment=test            # 表示当前环境，有 prod、test、dev 三种可供选择
 prodUrl=https://www.prod.com   # 生产环境下的访问路径
 testUrl=https://www.test.com   # 测试环境下的访问路径
@@ -262,7 +300,7 @@ public class LoginCase {
 
 ## 📊 执行与报告
 
-### 1. 测试执行命令
+### 测试执行命令
 ```bash
 # 测试用例执行
 mvn clean test
