@@ -26,8 +26,9 @@ BaseTestFramework 是一个基于 **Selenium** 和 **TestNG** 构建的自动化
 │   ├── 📂 annotation
 │   │   └── CaptureScreenshotOnFailure.java # 失败时截图注解
 │   ├── 📂 base
+│   │   ├── BaseCase.java                   # 注册监听器并初始化指定使用的浏览器类型
 │   │   ├── BaseHandler.java                # 原子操作封装库（点击/输入/滚动等）
-│   │   └── BasePage.java                   # 策略模式驱动的智能元素定位中心
+│   │   └── BasePage.java                   # 策略模式驱动的元素定位中心
 │   ├── 📂 constant
 │   │   └── FilePathConstant.java           # 配置文件路径管理
 │   ├── 📂 enums
@@ -321,6 +322,10 @@ allure open ./allure-results/html
 
 ### 📸 测试用例
 ![Image](https://github.com/user-attachments/assets/00e9d7ff-6161-487c-a22b-471e254284d3)
+
+### 🧩 Allure 报告
+
+![Image](https://github.com/user-attachments/assets/ba7e63f5-309b-421b-8c85-f2e9a995699c)
 
 
 ## 🤝 贡献者公约
