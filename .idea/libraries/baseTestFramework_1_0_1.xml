@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="baseTestFramework-1.0.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/baseTestFramework/target/baseTestFramework-1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
