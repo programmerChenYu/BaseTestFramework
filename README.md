@@ -1,6 +1,6 @@
 # BaseTestFramework - 快速自动化测试基础框架 🚀
 
-[![Java 17](https://img.shields.io/badge/Java-17-%23ED8B00?logo=openjdk)](https://openjdk.org/projects/jdk/17/)[![Maven 3.9.6](https://img.shields.io/badge/Maven-3.9.6-%23C71A36?logo=apachemaven)](https://maven.apache.org/docs/3.9.6/release-notes.html)[![License](https://img.shields.io/badge/License-MIT-%2300ADD8)](https://opensource.org/licenses/MIT)[![TestNexus Powered](https://img.shields.io/badge/Test--Nexus-1.0.1-%2300C4CC)](https://github.com/programmerChenYu/test-nexus) 
+[![Java 17](https://img.shields.io/badge/Java-17-%23ED8B00?logo=openjdk)](https://openjdk.org/projects/jdk/17/) [![Maven 3.9.6](https://img.shields.io/badge/Maven-3.9.6-%23C71A36?logo=apachemaven)](https://maven.apache.org/docs/3.9.6/release-notes.html) [![License](https://img.shields.io/badge/License-MIT-%2300ADD8)](https://opensource.org/licenses/MIT) [![TestNexus Powered](https://img.shields.io/badge/Test--Nexus-1.0.1-%2300C4CC)](https://github.com/programmerChenYu/test-nexus) 
 
 > **让测试代码比春天的新芽更优雅，让多端测试如呼吸般自然！**
 
@@ -532,7 +532,9 @@ allure open ./allure-results/html
 
 ### 🧩 Allure 报告
 
-![Image](https://github.com/user-attachments/assets/ba7e63f5-309b-421b-8c85-f2e9a995699c)
+![image](https://github.com/user-attachments/assets/c0be74d9-9dc1-44c3-98fc-cb483594c5fa)
+
+![image](https://github.com/user-attachments/assets/6ed1cf2a-3700-460d-83a6-a358fba0e0ae)
 
 
 ## 🤝 贡献者公约
